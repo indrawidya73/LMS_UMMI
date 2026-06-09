@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Logo MI Islamiyah</title>
+  <desc id="desc">Logo dekoratif MI Islamiyah Malang</desc>
+  <defs>
+    <linearGradient id="miGreen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#19ff25"/>
+      <stop offset="1" stop-color="#02a83a"/>
+    </linearGradient>
+  </defs>
+  <path d="M256 14c31 48 65 80 115 109 38 22 73 35 126 47-25 43-42 85-52 132-9 42-7 83 6 135-50-5-95 1-137 17-27 10-49 23-58 30-10-7-31-20-58-30-42-16-87-22-137-17 13-52 15-93 6-135-10-47-27-89-52-132 53-12 88-25 126-47 50-29 84-61 115-109z" fill="url(#miGreen)" stroke="#07552c" stroke-width="18"/>
+  <path d="M256 49c26 37 58 66 103 91 29 16 60 28 98 39-18 37-31 75-39 115-8 37-7 73 1 113-39-1-76 5-111 18-24 9-42 20-52 27-10-7-29-18-53-27-35-13-72-19-111-18 8-40 9-76 1-113-8-40-21-78-39-115 38-11 69-23 98-39 45-25 77-54 104-91z" fill="none" stroke="#062b1b" stroke-width="4" opacity=".65"/>
+  <g fill="#fff">
+    <path d="M256 70l14 44h46l-37 27 14 44-37-27-37 27 14-44-37-27h46z"/>
+    <path d="M109 190l9 28h30l-24 17 9 28-24-17-24 17 9-28-24-17h30zM403 190l9 28h30l-24 17 9 28-24-17-24 17 9-28-24-17h30zM93 304l8 24h25l-20 15 8 24-21-15-20 15 8-24-21-15h25zM419 304l8 24h25l-20 15 8 24-21-15-20 15 8-24-21-15h25z"/>
+  </g>
+  <circle cx="256" cy="228" r="63" fill="none" stroke="#062b1b" stroke-width="7"/>
+  <path d="M199 228h114M256 166c-22 31-22 93 0 124M256 166c22 31 22 93 0 124M210 195c28 10 64 10 92 0M210 261c28-10 64-10 92 0" fill="none" stroke="#062b1b" stroke-width="4"/>
+  <path d="M171 324c38-24 69-20 85 1 16-21 47-25 85-1-38 3-66 16-85 39-19-23-47-36-85-39z" fill="#062b1b"/>
+  <path d="M164 348c45 4 74 18 92 42 18-24 47-38 92-42" fill="none" stroke="#062b1b" stroke-width="9" stroke-linecap="round"/>
+  <path d="M159 379c65 3 129 3 194 0l-16 42c-54 10-108 10-162 0z" fill="#fee44a" stroke="#062b1b" stroke-width="5"/>
+  <text x="256" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#062b1b">MI ISLAMIYAH</text>
+  <path d="M304 145c20 60-29 118-44 167-3 10-16 7-12-3 19-47 25-110 56-164z" fill="#fff" stroke="#062b1b" stroke-width="4"/>
+</svg>

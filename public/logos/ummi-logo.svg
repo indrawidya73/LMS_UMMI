@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Logo UMMI</title>
+  <desc id="desc">Logo dekoratif metode UMMI</desc>
+  <circle cx="256" cy="256" r="232" fill="#f8ef48" stroke="#168a45" stroke-width="18"/>
+  <circle cx="256" cy="256" r="205" fill="none" stroke="#168a45" stroke-width="7"/>
+  <circle cx="256" cy="256" r="185" fill="none" stroke="#168a45" stroke-width="4"/>
+  <g fill="#078447" font-family="Georgia, 'Times New Roman', serif" font-weight="700">
+    <text x="256" y="240" text-anchor="middle" font-size="115">أمي</text>
+    <text x="256" y="315" text-anchor="middle" font-size="44">UMMI</text>
+  </g>
+  <path d="M170 360c46 30 126 30 172 0" fill="none" stroke="#078447" stroke-width="12" stroke-linecap="round"/>
+</svg>

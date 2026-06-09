@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Paksa tampilan mode terang agar browser (terutama HP) tidak
+   menerapkan auto dark mode yang membuat logo transparan jadi berlatar putih */
+:root {
+  color-scheme: light only;
+}
+
+html {
+  color-scheme: light only;
+  background-color: #ffffff;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+/* Cegah inversi otomatis (force dark) pada gambar/logo di sebagian browser */
+img {
+  forced-color-adjust: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Tampilan halaman laporan menyerupai kertas A4 di layar */
+.laporan-page {
+  width: 210mm;
+  max-width: 100%;
+}
+
+@media print {
+  body { background: white; }
+  @page { size: A4 portrait; margin: 0; }
+
+  /* Cetak hanya area laporan */
+  body * { visibility: hidden !important; }
+  #laporan-print, #laporan-print * { visibility: visible !important; }
+  #laporan-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 4mm 12mm 12mm 12mm !important; /* Menaikkan margin atas agar muat sempurna dan hemat spasi */
+    box-sizing: border-box;
+  }
+  .laporan-page {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  aside, header { display: none !important; }
+
+  /* Pastikan warna latar (garis tabel/header) ikut tercetak */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
