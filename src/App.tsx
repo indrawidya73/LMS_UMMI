@@ -22,11 +22,13 @@ import { PenilaianHarianPage } from "./components/penilaian/PenilaianHarian";
 import { AdminUsers } from "./components/admin/AdminUsers";
 import { AdminImport } from "./components/admin/AdminImport"; 
 import { JILID_OPTIONS } from "./types";
+import  DashboardGuruUMMI  from "./components/DashboardGuruUMMI";
+import AdminKelompokUMMI from "./components/admin/AdminKelompokUMMI";
 import { loadData, saveData, getNextId } from "./store";
 import { exportToExcel, exportToCSV, exportToPDF, buildHTMLTable } from "./utils/exportUtils";
 
 // ==================== TYPE ====================
-type Page = 'dashboard' | 'admin-users' | 'admin-import' | 'guru' | 'pengampu' | 'siswa' | 'kelas' | 'tahun-ajaran' | 'absensi' | 'penilaian' | 'penilaian-harian' | 'laporan';
+type Page = 'dashboard' | 'admin-users' | 'admin-import' | 'guru' | 'pengampu' | 'siswa' | 'kelas' | 'tahun-ajaran' | 'absensi' | 'penilaian' | 'penilaian-harian' | 'laporan' | 'dashboard-ummi';
 
 // ==================== UTILS ====================
 function cn(...classes: (string | boolean | undefined)[]) {
@@ -204,6 +206,7 @@ function Sidebar({
   const menu = user.role === "admin"
     ? [
         { page: "dashboard" as Page, label: "Dashboard", icon: LayoutDashboard },
+		{ page: "admin-kelompok-ummi" as Page, label: "Kelompok UMMI", icon: BookOpen },
         { page: "admin-users" as Page, label: "Manajemen User", icon: UserCog },
         { page: "admin-import" as Page, label: "Import Massal", icon: FileText },
       ]
@@ -219,6 +222,7 @@ function Sidebar({
         { page: "penilaian" as Page, label: "Penilaian", icon: BookOpen },
         { page: "penilaian-harian" as Page, label: "Penilaian Harian", icon: ClipboardCheck },
         { page: "laporan" as Page, label: "Laporan", icon: FileText },
+		{ page: "dashboard-ummi" as Page, label: "Dashboard UMMI", icon: TrendingUp },
       ]
     : [
         { page: "dashboard" as Page, label: "Dashboard", icon: LayoutDashboard },
@@ -707,9 +711,11 @@ export default function App() {
         <main className="p-4 md:p-6 lg:p-8 max-w-full">
           {currentPage === "dashboard" && <Dashboard user={user} data={data} />}
           {currentPage === "admin-users" && user.role === "admin" && <AdminUsers data={data} onUpdate={handleUpdate} />}
+		  {currentPage === "admin-kelompok-ummi" && user.role === "admin" && <AdminKelompokUMMI />}
           {currentPage === "admin-import" && user.role === "admin" && <AdminImport data={data} onUpdate={handleUpdate} />}
           {currentPage === "guru" && user.role === "guru" && <DataGuru data={data} onUpdate={handleUpdate} />}
           {currentPage === "pengampu" && user.role === "guru" && <PengampuUMMI data={data} />}
+		  {currentPage === 'dashboard-ummi' && <DashboardGuruUMMI guruId={user.id} />}
           {currentPage === "siswa" && user.role === "guru" && <DataSiswa data={data} onUpdate={handleUpdate} />}
           {currentPage === "kelas" && user.role === "guru" && <DataKelas data={data} onUpdate={handleUpdate} />}
           {currentPage === "tahun-ajaran" && user.role === "guru" && <TahunAjaranPage data={data} onUpdate={handleUpdate} />}
